@@ -1,5 +1,3 @@
-package kotlinexamples;
-
 import java.util.Optional;
 
 public class Extensions {

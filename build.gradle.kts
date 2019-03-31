@@ -1,16 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+    java
     kotlin("jvm") version "1.3.21"
 }
 
 group = "com.mziolo"
 version = "1.0-SNAPSHOT"
-
-apply {
-    plugin("idea")
-    plugin("groovy")
-}
 
 repositories {
     mavenCentral()
@@ -18,7 +14,10 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    testCompile("org.spockframework:spock-core:1.3-groovy-2.5")
+}
+
+configure<JavaPluginConvention> {
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
 tasks.withType<KotlinCompile> {
