@@ -1,11 +1,11 @@
 fun main() {
 
-    val boolean = true
+    val positiveCondition = true
+    val negativeCondition = false
 
-    val someString = if (boolean) "positive" else "negative"
-    // TODO Implement more pleasent conditional
-    //val someString = boolean.then("positive").or("negative")
-
-    println(someString)
-
+    println(if (positiveCondition) "positive" else "negative")
+    println(if (negativeCondition) "positive" else "negative")
+    // TODO Implement more pleasant conditional
+//    println(positiveCondition then "positive" or "negative")
+//    println(negativeCondition then "positive" or "negative")
 }
